@@ -1,7 +1,6 @@
 {
   "name": "techdegree-fullstackjs-course-review-rest-api",
   "version": "1.0.0",
-  "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon ./src/index.js localhost 5000"
@@ -12,7 +11,17 @@
     "nodemon": "^1.17.5"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "morgan": "^1.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darryldriedger/Build-a-Course-Rating-API-with-Express.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/darryldriedger/Build-a-Course-Rating-API-with-Express/issues"
+  },
+  "homepage": "https://github.com/darryldriedger/Build-a-Course-Rating-API-with-Express#readme",
+  "description": ""
 }
