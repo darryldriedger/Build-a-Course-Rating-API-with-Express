@@ -14,7 +14,7 @@
     "bcrypt": "^3.0.2",
     "express": "^4.16.4",
     "mongoose": "^5.3.13",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.1"
   },
   "repository": {
     "type": "git",
