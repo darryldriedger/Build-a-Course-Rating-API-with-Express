@@ -3,6 +3,9 @@
 
 ### Downloaded the project files and initialized the project
 
+# User Authentication With Express and Mongo
+Project code to support the [Treehouse](https://teamtreehouse.com) course [User Authentication With Express and Mongo](https://teamtreehouse.com/library/user-authentication-with-express-and-mongo)
+
 ## Project Instructions
 To complete this project, follow the instructions below. If you get stuck, ask a question on Slack or in the Treehouse Community.
 
