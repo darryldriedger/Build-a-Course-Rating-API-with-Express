@@ -3,6 +3,8 @@
 // load modules
 const express = require('express');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -14,12 +16,28 @@ app.use(morgan('dev'));
 
 // TODO add additional routes here
 
-// send a friendly greeting for the root route
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Welcome to the Course Review API'
-  });
-});
+//include routes
+var routes = require('../routes/index');
+app.use('/', routes);
+
+// // send a friendly greeting for the root route
+// app.get('/', (req, res) => {
+//   res.json({
+//     message: 'Welcome to the Course Review API'
+//   });
+// });
+
+
+// parse incoming requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// serve static files from /public
+app.use(express.static(__dirname + '/public'));
+
+// // view engine setup
+// app.set('view engine', 'pug');
+// app.set('views', __dirname + '/views');
 
 // uncomment this route in order to test the global error handler
 // app.get('/error', function (req, res) {
