@@ -8,6 +8,13 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+// mongodb connection
+mongoose.connect("mongodb://localhost:27017/cours-api");
+const db = mongoose.connection;
+// mongo error
+db.on('error', console.error.bind(console, 'connection error:'));
+
+
 // set our port
 app.set('port', process.env.PORT || 5000);
 
