@@ -26,7 +26,8 @@ app.use(morgan('dev'));
 //include routes
 var routes = require('../routes/index');
 app.use('/', routes);
-
+var usersRoute = require('../routes/users');
+app.use('/users', usersRoute);
 // // send a friendly greeting for the root route
 // app.get('/', (req, res) => {
 //   res.json({
