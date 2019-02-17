@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/cours-api");
+mongoose.connect("mongodb://localhost:27017/cours-api", { useNewUrlParser: true });
 const db = mongoose.connection;
 // mongo error
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -42,7 +42,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // serve static files from /public
 app.use(express.static(__dirname + '/../public'));
-
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/../views');
