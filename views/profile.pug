@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-2
+      table
+        thead
+          tr
+            th Name
+            th Email Address
+            th Password
+        tbody
+          each user in users
+            tr
+              td name
+              td address
+              td password
