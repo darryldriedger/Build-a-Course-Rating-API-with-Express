@@ -13,6 +13,40 @@ block content
         tbody
           each user in users
             tr
-              td name
-              td address
-              td password
+              td #{user.fullName}
+              td #{user.emailAddress}
+              td #{user.password}
+      table
+        thead
+          tr
+            th User
+            th Title
+            th Description
+            th Estimated Time
+            th Materials Needed
+            th Reviews
+            th Steps
+        tbody
+          each user in users
+            tr
+              td #{user.fullName}
+              td #{user.emailAddress}
+              td #{user.password}
+              td #{user.fullName}
+              td #{user.emailAddress}
+              td #{user.password}
+              td #{user.password}
+                    table
+        thead
+          tr
+            th User
+            th Rating
+            th Review
+            th Posted On
+        tbody
+          each user in users
+            tr
+              td #{user.fullName}
+              td #{user.emailAddress}
+              td #{user.password}    
+              td #{user.password}          
