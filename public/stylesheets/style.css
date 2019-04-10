@@ -191,6 +191,7 @@ p {
 	padding-top: 20px;
   }
   th {
+	color: orangered;
 	border-bottom: 2px solid blue;
 	text-align: left;
 	padding: 5px 20px 5px 10px;

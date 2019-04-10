@@ -10,10 +10,22 @@ var MongoStore = require('connect-mongo')(session);
 const app = express();
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/course-api", { useCreateIndex: true, useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/course-api" ,{ useCreateIndex: true, useNewUrlParser: true });
 const db = mongoose.connection;
+const dbUri = "course-api";
+
+db.on('connected', function(){
+  console.log("Connected to database " + dbUri);
+});
+db.on('error', function(){
+  console.log("Connection error trying to connect to database " + dbUri);
+});
+db.on('disconnected', function(){
+  console.log("Disconnected from database " + dbUri);
+});
+
 // mongo error
-db.on('error', console.error.bind(console, 'connection error:'));
+// db.on('error', console.error.bind(console, 'connection error:'));
 
 
 // set our port
