@@ -10,11 +10,7 @@ var MongoStore = require('connect-mongo')(session);
 const app = express();
 
 // mongodb connection
-<<<<<<< HEAD
-mongoose.connect("mongodb://localhost:27017/course-api", { useNewUrlParser: true });
-=======
 mongoose.connect("mongodb://localhost:27017/course-api" ,{ useCreateIndex: true, useNewUrlParser: true });
->>>>>>> 672449f4f3601ef9fff8615893686b2e75813d7a
 const db = mongoose.connection;
 const dbUri = "course-api";
 
